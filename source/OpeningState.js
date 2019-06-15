@@ -54,12 +54,7 @@ OpeningState.prototype.notifyTitleConclusion = function() {
 
 
 OpeningState.prototype.notifyReplaySelectBegin = function() {
-  if(this.isMultiPlay()) {
-    // TODO: temporal
-    window.alert('cannot choose replay for multi play.');
-  } else {
-    this.game.notifyReplaySelectBegin();
-  }
+  this.game.notifyReplaySelectBegin();
 };
 
 

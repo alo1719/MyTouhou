@@ -317,7 +317,7 @@ Game.prototype.notifyCharacterSelectConclusion = function (index) {
 };
 
 
-Game.prototype.notifyReplaySelectBegin = function () {
+Game.prototype.notifyReplaySelectBegin = function (index) {
     this._changeState(Game._STATE_REPLAY_SEL, {});
 };
 
