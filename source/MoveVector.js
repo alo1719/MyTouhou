@@ -54,9 +54,6 @@ MoveVectorFactory.prototype.free = function (vector) {
 };
 
 
-/**
- * TODO: list may should be Linked list if num is large.
- */
 function MoveVectorFreeList(num) {
     FreeList.call(this, num);
 }
@@ -72,11 +69,8 @@ MoveVectorFreeList.prototype._generateElement = function () {
 };
 
 
-/**
- *
- */
 function MoveVector() {
-    this.r = 0;  // TODO: should be "v"elocity?
+    this.r = 0;
     this.theta = 90;
     this.w = 0;
     this.ra = 0;
@@ -122,10 +116,6 @@ MoveVector.prototype.init = function (params) {
 };
 
 
-/**
- * TODO: temporal
- * How to handle floating point...?
- */
 MoveVector.prototype._getRandomValue = function (range) {
     var differ = range.max - range.min;
     return ((this.Randomizer.random() * differ) | 0) + range.min;
