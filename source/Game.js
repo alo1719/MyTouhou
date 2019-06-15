@@ -29,7 +29,7 @@ function Game(mainCanvas, bgCanvas) {
 
     this._changeState(Game._STATE_LOAD, {});
 
-    let self = this;
+    var self = this;
     this.runFunc = function () {
         self._runStep();
     };
@@ -174,7 +174,7 @@ Game.prototype.getImage = function (key) {
 
 
 Game.prototype.soundEffect = function (key) {
-    let game = Game;
+    var game = Game;
     switch (key) {
         case game._SE_SHOT:
             this.sounds[key].volume = 0.012;
@@ -217,7 +217,7 @@ Game.prototype.soundEffect = function (key) {
 
 Game.prototype.soundBGM = function (key) {
 
-    for (let i = 0; i < this.bgms.length; i++) {
+    for (var i = 0; i < this.bgms.length; i++) {
         this.bgms[i].pause();
         this.bgms[i].currentTime = 0;
     }
@@ -273,9 +273,9 @@ Game.prototype.runNextStep = function () {
 Game.prototype._calculateFps = function () {
     if ((this.count % Game._FPS_SPAN) !== 0)
         return;
-    let newTime = Date.now();
-    let elapsedTime = newTime - this.oldTime;
-    let fps = 1000 * Game._FPS_SPAN / elapsedTime;
+    var newTime = Date.now();
+    var elapsedTime = newTime - this.oldTime;
+    var fps = 1000 * Game._FPS_SPAN / elapsedTime;
     if (this.oldTime) {
         this.fps = parseInt(fps.toString());
     }
@@ -308,9 +308,9 @@ Game.prototype.notifyOpeningConclusion = function () {
 
 
 Game.prototype.notifyCharacterSelectConclusion = function (index) {
-    let seed = (new Date()).getTime() & 0xffff;
+    var seed = (new Date()).getTime() & 0xffff;
 
-    let params = {};
+    var params = {};
     params.characterIndex = index;
     params.seed = seed;
     this._changeState(Game._STATE_IN_STAGE, params);

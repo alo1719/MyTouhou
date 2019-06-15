@@ -836,16 +836,6 @@ StageState.prototype.notifyBossVanished = function( boss ) {
 
   this.clearFlag( this._FLAG_BOSS_EXIST ) ;
   this.score += boss.score ;
-
-  // TODO: temporal
-  if(this.stageIndex == 0 && this.bossManager.index == 1)
-    this.sendMessageToServer(GameSocket._STATE_DESTROY_STAGE1_MID_BOSS);
-  else if(this.stageIndex == 0 && this.bossManager.index == 2)
-    this.sendMessageToServer(GameSocket._STATE_DESTROY_STAGE1_BIG_BOSS);
-  else if(this.stageIndex == 1 && this.bossManager.index == 1)
-    this.sendMessageToServer(GameSocket._STATE_DESTROY_STAGE2_MID_BOSS);
-  else if(this.stageIndex == 1 && this.bossManager.index == 2)
-    this.sendMessageToServer(GameSocket._STATE_DESTROY_STAGE2_BIG_BOSS);
 } ;
 
 
