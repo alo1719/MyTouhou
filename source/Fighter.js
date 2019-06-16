@@ -163,7 +163,7 @@ function Fighter(gameState, maxX, maxY, image, id) {
     this.power = 0;
     this.powerLevel = 0;
     this.deadCount = 0;
-    this.spellCard = '符卡名称';
+    this.spellCard = '霊符「夢想封印」';
     this.setFlag(this._FLAG_UNHITTABLE);
     this.options = [];
     this._initView();

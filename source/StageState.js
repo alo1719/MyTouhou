@@ -1576,8 +1576,8 @@ ClearState.prototype.updateDisplay = function (surface) {
     surface.fillRect(50, base + 50, 380, 380);
     surface.fillStyle = 'rgb( 255, 255, 255 )';
     surface.textAlign = 'left';
-    surface.font = '16px Arial';
-    surface.fillText('Stage' + (this.stage.stageIndex + 1) + ' Clear',
+    surface.font = '16px Dengxian';
+    surface.fillText('关卡' + (this.stage.stageIndex + 1) + '完成',
         100, base + 100);
     surface.restore();
 
@@ -1645,18 +1645,23 @@ GameOverState.prototype.updateDisplay = function (surface) {
     surface.fillStyle = 'rgb( 255, 255, 255 )';
     surface.textAlign = 'center';
     surface.textBaseAlign = 'middle';
-    surface.font = '16px Arial';
+
+    surface.font = '24px Dengxian';
+    surface.globalAlpha = 1.0;
+    surface.fillText('满目疮痍', 240, 160);
+
+    surface.font = '18px Dengxian';
     if (this.index === 0) {
         surface.globalAlpha = 1.0;
     } else {
         surface.globalAlpha = 0.2;
     }
-    surface.fillText('Continue', 240, 200);
+    surface.fillText('继续游戏', 240, 200);
     if (this.index === 0) {
         surface.globalAlpha = 0.2;
     } else {
         surface.globalAlpha = 1.0;
     }
-    surface.fillText('Quit', 240, 240);
+    surface.fillText('退出游戏', 240, 240);
     surface.restore();
 };

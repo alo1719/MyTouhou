@@ -1,5 +1,5 @@
 var __stage1Params = {
-    'title': 'Nothing Special',
+    'title': '平凡的一天',
     'bgScale': [
         {'beginCount': 0, 'endCount': 1, 'a': 0.5},
         {'beginCount': 500, 'endCount': 1500, 'd': 0.0002},
@@ -8,7 +8,7 @@ var __stage1Params = {
 };
 
 var __stage2Params = {
-    'title': 'Something Special',
+    'title': '好像有些事情发生了',
     'bgScale': [
         {'beginCount': 0, 'endCount': 1, 'a': 1.0},
         {'beginCount': 500, 'endCount': 1500, 'd': -0.0001},

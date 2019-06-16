@@ -21,11 +21,9 @@ function Game(mainCanvas, bgCanvas) {
     this.states[Game._STATE_LOAD] = new LoadingState(this);
     this.states[Game._STATE_OPENING] = new OpeningState(this);
     this.states[Game._STATE_CHARA_SEL] = new CharacterSelectState(this);
-    this.states[Game._STATE_REPLAY_SEL] = new ReplaySelectState(this);
     this.states[Game._STATE_IN_STAGE] = new StageState(this);
     this.states[Game._STATE_ENDING] = new EndingState(this);
     this.states[Game._STATE_STAFF_ROLL] = new StaffRollState(this);
-    this.states[Game._STATE_POST_REPLAY] = new PostReplayState(this);
 
     this._changeState(Game._STATE_LOAD, {});
 
@@ -46,12 +44,10 @@ Game._FPS_SPAN = 60;
 Game._STATE_LOAD = 0x0;
 Game._STATE_OPENING = 0x1;
 Game._STATE_CHARA_SEL = 0x2;
-Game._STATE_REPLAY_SEL = 0x3;
-Game._STATE_IN_STAGE = 0x4;
-Game._STATE_STAGE_CLEAR = 0x5;
-Game._STATE_ENDING = 0x6;
-Game._STATE_STAFF_ROLL = 0x7;
-Game._STATE_POST_REPLAY = 0x8;
+Game._STATE_IN_STAGE = 0x3;
+Game._STATE_STAGE_CLEAR = 0x4;
+Game._STATE_ENDING = 0x5;
+Game._STATE_STAFF_ROLL = 0x6;
 
 // 不同音效
 Game._SE_SELECT = 0;
@@ -330,10 +326,7 @@ Game.prototype.notifyReplaySelectConclusion = function (params) {
 
 
 Game.prototype.notifyQuitStage = function (flag) {
-    if (flag)
-        this._changeState(Game._STATE_POST_REPLAY, {});
-    else
-        this._changeState(Game._STATE_OPENING, {});
+    this._changeState(Game._STATE_OPENING, {});
 };
 
 

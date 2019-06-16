@@ -3,7 +3,7 @@ var __marisaBossTalkParams = [];
 
 __reimuBossTalkParams.push(
     {
-        'serif': 'Hi, how\'re you doing, Rumia?',
+        'serif': '你在干些什么, 露米娅?',
         'left': {'character': 'reimu', 'active': true},
         'right': {'character': 'rumia'},
     }
@@ -11,7 +11,7 @@ __reimuBossTalkParams.push(
 
 __reimuBossTalkParams.push(
     {
-        'serif': 'Good. But hungry. Can I eat you?',
+        'serif': '好的, 但是我饿了, 我能吃掉你吗?',
         'left': {'character': 'reimu'},
         'right': {'character': 'rumia', 'active': true},
     }
@@ -19,7 +19,7 @@ __reimuBossTalkParams.push(
 
 __reimuBossTalkParams.push(
     {
-        'serif': 'Sorry, I\'m busy now.\nI can play with you after I solve the Ihen.',
+        'serif': '抱歉, 我现在很忙. 我之后可以和你一起玩.',
         'left': {'character': 'reimu', 'active': true},
         'right': {'character': 'rumia'},
     }
@@ -28,7 +28,7 @@ __reimuBossTalkParams.push(
 
 __marisaBossTalkParams.push(
     {
-        'serif': 'Hi, Marisa. What are you doing now?',
+        'serif': '嘿, 魔理沙, 你在干什么?',
         'left': {'character': 'marisa'},
         'right': {'character': 'rumia', 'active': true},
     }
@@ -36,7 +36,7 @@ __marisaBossTalkParams.push(
 
 __marisaBossTalkParams.push(
     {
-        'serif': 'Ah? I just enjoy flying now.',
+        'serif': '啊? 我正在享受飞行的快乐.',
         'left': {'character': 'marisa', 'active': true},
         'right': {'character': 'rumia'},
     }
@@ -44,7 +44,7 @@ __marisaBossTalkParams.push(
 
 __marisaBossTalkParams.push(
     {
-        'serif': 'So-nano-ka-?',
+        'serif': '是--这--样--吗?',
         'left': {'character': 'marisa'},
         'right': {'character': 'rumia', 'active': true},
     }
@@ -58,7 +58,7 @@ var __reimuClearTalkParams = [];
 
 __reimuClearTalkParams.push(
     {
-        'serif': 'Got tired.',
+        'serif': '累了.',
         'left': {'character': 'reimu', 'active': true},
     }
 );
@@ -67,7 +67,7 @@ var __marisaClearTalkParams = [];
 
 __marisaClearTalkParams.push(
     {
-        'serif': 'I\'ve done it.',
+        'serif': '我做到了!',
         'left': {'character': 'marisa', 'active': true},
     }
 );
@@ -84,7 +84,7 @@ __stage1TalksParams.push(__stage1ClearTalkParams);
 var __reimuBossTalk2Params = [];
 __reimuBossTalk2Params.push(
     {
-        'serif': 'Sorry, I have no topics.',
+        'serif': '抱歉, 我没什么好聊的.',
         'left': {'character': 'reimu', 'active': true},
         'right': {'character': 'chilno'},
     }
@@ -92,7 +92,7 @@ __reimuBossTalk2Params.push(
 
 __reimuBossTalk2Params.push(
     {
-        'serif': 'W-What\'s!?',
+        'serif': '什, 什么?',
         'left': {'character': 'reimu'},
         'right': {'character': 'chilno', 'active': true},
     }
@@ -102,7 +102,7 @@ __reimuBossTalk2Params.push(
 var __marisaBossTalk2Params = [];
 __marisaBossTalk2Params.push(
     {
-        'serif': 'Sorry, I have no topics.',
+        'serif': '抱歉, 我没什么好聊的.',
         'left': {'character': 'marisa', 'active': true},
         'right': {'character': 'chilno'},
     }
@@ -110,7 +110,7 @@ __marisaBossTalk2Params.push(
 
 __marisaBossTalk2Params.push(
     {
-        'serif': 'W-What\'s!?',
+        'serif': '什, 什么?',
         'left': {'character': 'marisa'},
         'right': {'character': 'chilno', 'active': true},
     }

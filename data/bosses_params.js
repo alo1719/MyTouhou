@@ -126,7 +126,7 @@ __stage1BossParams.push(
                     ]
                 },
                 {
-                    'spellCard': 'Rumia\'s Spell 1',
+                    'spellCard': '月符「Moonlight Ray」',
                     'x': 240,
                     'y': 100,
                     'vital': 300,
@@ -160,7 +160,7 @@ __stage1BossParams.push(
                     ]
                 },
                 {
-                    'spellCard': 'Rumia\'s Spell 2',
+                    'spellCard': '夜符「Night Bird」',
                     'x': 240,
                     'y': 100,
                     'vital': 300,
@@ -254,7 +254,7 @@ __stage2BossParams.push(
         'params':
             [
                 {
-                    'spellCard': 'The star of Chilno',
+                    'spellCard': '冰符「Icicle Fall」',
                     'x': 240,
                     'y': 150,
                     'vital': 300,
@@ -266,7 +266,7 @@ __stage2BossParams.push(
                     ]
                 },
                 {
-                    'spellCard': 'Something freeze',
+                    'spellCard': '雹符「Hailstorm」',
                     'x': 240,
                     'y': 100,
                     'vital': 300,
@@ -310,7 +310,7 @@ __stage2BossParams.push(
                     }
                 },
                 {
-                    'spellCard': 'Falling icicle',
+                    'spellCard': '冻符「Perfect Freeze」',
                     'x': 240,
                     'y': 100,
                     'vital': 300,
