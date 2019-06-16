@@ -159,9 +159,9 @@ Game._BGM_1 = 1;
 Game._BGM_ENDING = 2;
 
 Game._BGMS = {};
-Game._BGMS[Game._BGM_TITLE] = 'BGM/title.mp3';
-Game._BGMS[Game._BGM_1] = 'BGM/bgm.mp3';
-Game._BGMS[Game._BGM_ENDING] = 'BGM/ending.mp3';
+Game._BGMS[Game._BGM_TITLE] = 'BGM/bgm_title.mp3';
+Game._BGMS[Game._BGM_1] = 'BGM/bgm_stage1.mp3';
+Game._BGMS[Game._BGM_ENDING] = 'BGM/bgm_end.mp3';
 
 
 Game.prototype.getImage = function (key) {

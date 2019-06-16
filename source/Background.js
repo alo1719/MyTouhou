@@ -26,23 +26,15 @@ BackgroundManager.prototype._initFactory = function () {
 
 BackgroundManager.prototype._init = function () {
     this.elements.length = 0;
-    this.add(new Background(this.gameState,
-        this.gameState.maxX,
-        this.gameState.maxY));
-    this.add(new Background(this.gameState,
-        this.gameState.maxX,
-        this.gameState.maxY));
+    this.add(new Background(this.gameState, this.gameState.maxX, this.gameState.maxY));
+    this.add(new Background(this.gameState, this.gameState.maxX, this.gameState.maxY));
 };
 
 
 BackgroundManager.prototype.initDrawer = function (layer, image) {
     this.drawers.length = 0;
-    this.drawers.push(new BackgroundDrawer(
-        this.get(0), layer,
-        this.gameState.getImage(Game._IMG_BG1)));
-    this.drawers.push(new BackgroundDrawer(
-        this.get(1), layer,
-        this.gameState.getImage(Game._IMG_BG2)));
+    this.drawers.push(new BackgroundDrawer(this.get(0), layer, this.gameState.getImage(Game._IMG_BG1)));
+    this.drawers.push(new BackgroundDrawer(this.get(1), layer, this.gameState.getImage(Game._IMG_BG2)));
 
     this.effectTextures.length = 0;
     this._initForwardBlackEffect(layer);
@@ -207,14 +199,13 @@ function Background(gameState, maxX, maxY) {
     this.parent = Element;
     this.parent.call(this, gameState, maxX, maxY);
     this._initView();
-};
+}
 __inherit(Background, Element);
 
 
 Background.prototype.init = function (params, image) {
     this.image = image;
-//  Prolly unnecessary to call perent init()
-//  this.parent.prototype.init.call(this, params, image);
+    this.parent.prototype.init.call(this, params, image);
 };
 
 

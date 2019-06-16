@@ -533,6 +533,8 @@ StageState.prototype.handleKeyDown = function (e) {
     // if (e.keyCode === 89) // y
     //     this.viewFromFighter = ~this.viewFromFighter;
 
+    if (e.keyCode === 89) // y
+        this.notifyFighterDead(this.fighter, null);
     if (this.isFlagSet(this._FLAG_AUTO_PLAY))
         return;
 //  this.states[ this.state ].handleKeyDown( e ) ;
@@ -1602,7 +1604,6 @@ function GameOverState(stage) {
 
 __inherit(GameOverState, StageAbstractState);
 
-
 GameOverState.prototype.init = function () {
     this.index = 0;
 };
@@ -1627,7 +1628,6 @@ GameOverState.prototype.handleKeyDown = function (e) {
                 this.stage.notifyQuit();
             break;
     }
-    ;
 };
 
 

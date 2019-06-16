@@ -54,11 +54,7 @@ StaffRollState.prototype._displayBG = function (surface) {
 StaffRollState.prototype._displayMessage = function (surface) {
 
     var messages = [];
-    messages.push('');
-    messages.push('');
     messages.push('关于游戏');
-    messages.push('');
-    messages.push('');
     messages.push('');
     messages.push('');
     messages.push('游戏引擎');
@@ -69,22 +65,17 @@ StaffRollState.prototype._displayMessage = function (surface) {
     messages.push('glMatrix');
     messages.push('');
     messages.push('');
-    messages.push('');
-    messages.push('');
     messages.push('原作');
     messages.push('东方Project');
     messages.push('上海アリス幻樂団');
     messages.push('');
     messages.push('');
-    messages.push('');
-    messages.push('');
-    messages.push('弹幕魔法使');
-    messages.push('');
-    messages.push('');
-    messages.push('感谢有你');
+    messages.push('开发');
+    messages.push('2016141463067');
+    messages.push('张心诣');
 
     surface.save();
-    surface.font = '30pt Calibri';
+    surface.font = '30pt Dengxian';
     surface.textAlign = 'center';
     surface.textBaseline = 'middle';
     surface.fillStyle = 'rgb( 0, 0, 0 )';

@@ -260,7 +260,7 @@ TitleState.prototype._displayMessage = function (surface) {
     surface.font = "30px 'Microsoft YaHei'";
     surface.textAlign = 'center';
     surface.textBaseAlign = 'middle';
-    surface.fillStyle = 'rgb( 0, 0, 0 )';
+    surface.fillStyle = 'rgb( 255, 255, 255 )';
 
     if (this.count - TitleState._GLOBALALPHA_SPAN < TitleState._GLOBALALPHA_SPAN)
         surface.globalAlpha = (this.count - TitleState._GLOBALALPHA_SPAN) / TitleState._GLOBALALPHA_SPAN;
@@ -280,7 +280,7 @@ TitleState.prototype._displayPressKey = function (surface) {
     surface.font = "22px Dengxian";
     surface.textAlign = 'center';
     surface.textBaseAlign = 'middle';
-    surface.fillStyle = 'rgb( 0, 0, 0 )';
+    surface.fillStyle = 'rgb( 255, 255, 255 )';
 
     if (this.index === 0)
         surface.globalAlpha = 1.0;
