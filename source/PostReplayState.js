@@ -22,7 +22,7 @@ PostReplayState.prototype.init = function () {
 
 
 PostReplayState.prototype._postReplay = function () {
-    var user = window.prompt('your name?');
+    var user = window.prompt('您的名字?');
     if (!user)
         return;
     var xhr = new XMLHttpRequest();
@@ -67,14 +67,11 @@ PostReplayState.prototype.updateDisplay = function (surface) {
     this.game.clear(surface);
     this._displayBG(surface);
     this._displayMessage(surface);
-    if (this.state == PostReplayState._STATE_SELECT)
+    if (this.state === PostReplayState._STATE_SELECT)
         this._displayQuestion(surface);
 };
 
 
-/**
- * TODO: temporal
- */
 PostReplayState.prototype._displayBG = function (surface) {
     surface.save();
     surface.fillStyle = 'rgb( 0, 0, 0 )';
@@ -103,15 +100,14 @@ PostReplayState.prototype._displayBG = function (surface) {
 
 PostReplayState.prototype._displayMessage = function (surface) {
     surface.save();
-    surface.font = "30px 'Comic Sans MS'";
+    surface.font = "30px 'Microsoft YaHei'";
     surface.textAlign = 'center';
     surface.textBaseAlign = 'middle';
     surface.fillStyle = 'rgb( 255, 255, 255 )';
-    surface.fillText('Replay Select', this.getWidth() / 2, 35);
+    surface.fillText('选择回放', this.getWidth() / 2, 35);
 
-    // TODO: temporal
-    if (this.state == PostReplayState._STATE_REPLAY_POSTING) {
-        surface.fillText('Saving...', this.getWidth() / 2, this.getHeight() / 2);
+    if (this.state === PostReplayState._STATE_REPLAY_POSTING) {
+        surface.fillText('保存中...', this.getWidth() / 2, this.getHeight() / 2);
     }
 
     surface.restore();
@@ -121,23 +117,23 @@ PostReplayState.prototype._displayMessage = function (surface) {
 
 PostReplayState.prototype._displayQuestion = function (surface) {
     surface.save();
-    surface.font = "30px 'Comic Sans MS'";
+    surface.font = "30px 'Microsoft YaHei'";
     surface.textAlign = 'center';
     surface.textBaseAlign = 'middle';
     surface.fillStyle = 'rgb( 255, 255, 255 )';
-    surface.fillText('Will you save your replay?', this.getWidth() / 2, 100);
+    surface.fillText('您要保存录像吗?', this.getWidth() / 2, 100);
 
-    if (this.index == 0)
+    if (this.index === 0)
         surface.globalAlpha = 1.0;
     else
         surface.globalAlpha = 0.4;
-    surface.fillText('Yes', this.getWidth() / 2, 200);
+    surface.fillText('是', this.getWidth() / 2, 200);
 
-    if (this.index == 1)
+    if (this.index === 1)
         surface.globalAlpha = 1.0;
     else
         surface.globalAlpha = 0.4;
-    surface.fillText('No', this.getWidth() / 2, 250);
+    surface.fillText('否', this.getWidth() / 2, 250);
 
     surface.restore();
 };
@@ -148,23 +144,21 @@ PostReplayState.prototype.handleKeyDown = function (e) {
         case 38: // up
         case 40: // down
             this._soundEffect(Game._SE_SELECT);
-            if (this.index == 0)
+            if (this.index === 0)
                 this.index = 1;
             else
                 this.index = 0;
             break;
         case 90: // z
             this._soundEffect(Game._SE_SELECT);
-            if (this.index == 0)
+            if (this.index === 0)
                 this._postReplay();
             else
-                this.game.notifyQuitStage(); // TODO: temporal
+                this.game.notifyQuitStage();
             break;
     }
-    ;
 };
 
 
 PostReplayState.prototype.handleKeyUp = function (e) {
-
 };

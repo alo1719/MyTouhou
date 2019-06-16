@@ -58,6 +58,9 @@ OpeningState.prototype.notifyReplaySelectBegin = function () {
     this.game.notifyReplaySelectBegin();
 };
 
+OpeningState.prototype.notifyAboutGame = function () {
+    this.game.notifyGameClear();
+};
 
 OpeningState.prototype.getImage = function (key) {
     return this.game.getImage(key);
@@ -283,13 +286,19 @@ TitleState.prototype._displayPressKey = function (surface) {
         surface.globalAlpha = 1.0;
     else
         surface.globalAlpha = 0.2;
-    surface.fillText('开始游戏', 120, 300);
+    surface.fillText('开始游戏', 120, 280);
 
     if (this.index === 1)
         surface.globalAlpha = 1.0;
     else
         surface.globalAlpha = 0.2;
-    surface.fillText('回放', 120, 340);
+    surface.fillText('回放', 120, 320);
+
+    if (this.index === 2)
+        surface.globalAlpha = 1.0;
+    else
+        surface.globalAlpha = 0.2;
+    surface.fillText('关于游戏', 120, 360);
 
     surface.restore();
 };
@@ -302,21 +311,25 @@ TitleState.prototype.handleKeyDown = function (e) {
             if (this.state === TitleState._STATE_DISPLAYED) {
                 if (this.index === 0)
                     this.opening.notifyTitleConclusion();
-                else
+                else if (this.index === 1)
                     this.opening.notifyReplaySelectBegin();
+                else
+                    this.opening.notifyAboutGame();
             } else {
                 this.state = TitleState._STATE_DISPLAYED;
                 this.count = TitleState._GLOBALALPHA_SPAN * 2;
             }
             break;
         case 38: // up
+            if (this.state === TitleState._STATE_DISPLAYED) {
+                this.soundEffect(Game._SE_SELECT);
+                this.index = (this.index + 2) % 3;
+            }
+            break;
         case 40: // down
             if (this.state === TitleState._STATE_DISPLAYED) {
                 this.soundEffect(Game._SE_SELECT);
-                if (this.index === 0)
-                    this.index = 1;
-                else
-                    this.index = 0;
+                this.index = (this.index + 1) % 3;
             }
             break;
         case 32: // space
